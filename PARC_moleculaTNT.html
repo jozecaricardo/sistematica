@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>parcimônia com moléculas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sistemática Filogenética e métodos baseados em modelos</a>
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger">Introdução</button>
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="introducao.html">Início</a></li>
+            <li><a class="dropdown-item" href="int_objetivos.html">Objetivos</a></li>
+            <li><a class="dropdown-item" href="int_ementa.html">Ementa</a></li>
+            <li><a class="dropdown-item" href="int_programa.html">Programa</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="int_referencias.html">Referências bibliográficas</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Classificações
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="class_objetivos.html">Objetivos</a></li>
+                <li><a class="dropdown-item" href="class_exercicios.html">Para refletir e responder...</a></li>
+                <li><a class="dropdown-item" href="class_subordina.html">Preparando uma classificação por subordinação</a></li>
+                <li><a class="dropdown-item" href="class_seque.html">Preparando uma classificação por sequenciação</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sistemática filogenética (Cladística)
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="PARC_objetivos.html">Objetivos</a></li>
+                  <li><a class="dropdown-item" href="#">Morfologia: busca TRADICIONAL pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="#">Morfologia: Busca com o uso de "NEW TECHNOLOGY" pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_moleculaTNT.html">DNA e RNA: Busca de árvores pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_bootBremer.html">Índices de suporte (bootstrap e Índice de Bremer) no TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_pesagemImplicita.html">Pesagem implícita (Implicit weighting)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="PARC_sensit.html">Análise de sensitividade com o uso de diferentes valores de K determinados pela matriz de caracteres</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="PARC_referencias.html">Referências</a></li>
+              </ul>
+           </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Métodos baseados em modelos
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="MOD_objetivos.html">Objetivos</a></li>
+                  <li><a class="dropdown-item text-wrap" href="MOD_alinhamento.html">Alinhamento de sequências</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Escolha de modelos de evolução molecular no PartitionFinder</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Busca de árvores no IQTree e índice de suporte (máxima verossimilhança)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Preparação dos dados e busca de árvores pelo MrBayes (Bayesianismo)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Escolha de melhor modelo com integração termodinâmica e fator de Bayes</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Bayesianismo e evidência total (matriz com caracteres baseados em morfologia e em sequências de DNA)</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Referências</a></li>
+              </ul>
+          </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+  <!---- Exercícios -->
+  <div>
+    <p class="fs-2 text-success">First things first</p>
+    <ol>
+        <li class="fs-4 fw-normal">Crie um diretório de trabalho na raiz do seu computador. Evite muitos subdiretórios;</li>
+        <li class="fs-4 fw-normal">Instale o <a href="https://www.lillo.org.ar/phylogeny/tnt/">TNT (versão "no taxon limit");</a></li>
+        <li class="fs-4 fw-normal">Instale o <a href="https://www.lillo.org.ar/phylogeny/tnt/">TNT (versão "Command-driven version")</a>, para usufruir das possibilidades de linhas de comando (o que eu realmente recomendo!).</li>
+    </ol>
+  </div>
+
+  <p class="fw-semibold fs-6 lh-sm">Criar uma matriz de dados moleculares para ser lida no TNT, com base nas informações contidas em <a href="primate-mtDNA.nex">DNA_primatas_not_interleaved</a>, em formato não <i>interleaved</i> ou em <a href="primate-mtDNA-interleaved.nex">DNA_primatas_interleaved</a>, em formato <i>interleaved</i>. Após isso, leia o arquivo da forma que preferir; isto é, <strong>ou você usa o TNT GUI para Windows (conforme já feito em aulas anteriores) ou use via linha de comando, via TNT (versão "Command-driven version").</strong></p>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Parte #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Tutorial para criar uma matriz de caracteres baseados em DNA, a fim de ser lido corretamente pelo TNT:</strong>
+          <div>
+            <pre>
+                <code>
+                    xread
+                    ' Pode colocar qualquer comentário importante aqui ENTRE ASPAS SIMPLES! '
+                    1095 46
+                    Nome_seq #1
+                    Seq #1
+                    ...
+                    Nome_seq #46
+                    Seq #46
+                    ; ' Note a presenca do ponto-e-virgula '
+                </code>
+            </pre>
+            <p class="fw-light font-monospace">Você preferencialmente deve salvar o arquivo com extensão <bold>.tnt</bold></p>.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Parte #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Uma análise básica para busca tradicional de árvores mais parcimoniosas e produção de uma árvore de consenso estrito. No pipeline de comando, digite <code>run nome_do_arquivo.txt;</code></strong>
+          <div>
+            <pre>
+                <code>
+                    macro=;
+                    mxram 2000; /* aumenta o espaço na memória RAM */
+                    macro * 15 1000;
+                    piwe-; /* cancela qualquer esquema de pesagem implícita */
+                    k0;  /* por prevenção, elimina quaisquer árvores que estejam na memória */
+                    macfloat 0; /* números inteiros */
+                    run NOME_DO_ARQUIVO_MATRIZ_DE_CARACTERES.tnt; /* abre matriz criada por você, a qual deve estar no mesmo diretório do TNT */
+                    hold 99999;      /*  define buffer de arvores para salvar ate N arvores   */ 
+                    log Resultados.txt ; /*  abre log de saida do script   */
+                    
+                    /*  aqui comeca analise tradicional */
+                    ttags - ;      /*  por prevencao, descarta todas as etiquetas de arvore da memoria   */
+                    rseed 0 ;      /*  define random seed, 0 = time   */
+                    mult 700 = hold 150 tbr; /* 700 RAS (random addition sequences: arvores de Wagner), mantendo 150 na memoria a cada replica */
+                    bb=tbr; /* com as arvores retidas na memoria, fazer uma busca do tipo tree-bissection-reconnection (tbr) */
+                    tsave *MP_trees.tre ;      /*  abre arquivo de arvores, para salvar todas as árvores igualmente parcimoniosas da busca (maximum parsimony trees - MPT)  */ 
+                    save ;      /*  salva arvores para arquivo   */
+                    tsave / ;      /*  fecha arquivo com arvores salvas   */
+                    export = Trees_MP_newick.tre; /*  exporta a árvore para ser lida em softwares como o FigTree  */
+                    if ((ntrees+1) > 1)
+                        nelsen*;      /*  calcula consenso estrito   */
+                        tsave *Consenso_trees.tre ;      /*  abre arquivo de arvore  e mantem apenas a ultima arvore na memoria - observe que as MPT serão descartadas, ficando apenas o consenso estrito  */
+                        save {strict};
+                        tsave/ ;      /*  fecha arquivo com consenso salvo   */
+                    end;
+                    apo-; /* lista de sinapomorfias */
+                    tsave tree1.tmp;
+                    save 0;
+                    tsave/;
+                    keep 0; /* apaga todas as arvores da memoria */
+                    short tree1.tmp; /* resgata uma arvore nao consenso */
+
+                    ttags = ;  
+                    apo ]  /*  mapeia as sinapomorfias na ultima árvore da memória   */
+                    ttag & Map_apoTree.svg ;      /*  salva arvore */
+                    taxname=;
+
+                    log/ ;
+                    quote Rotina produzida por J. R. I. Ribeiro exclusivamente para a disciplina de Sistemática Filoogenética e métodos baseados em modelos.;
+                    proc/ ;
+                </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Exercícios
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul>
+            <li><p class="fst-italic fs-6">Se não usarmos as etapas bb com tbr, o que acontece se diminuirmos o número de RAS, mantendo o mesmo espaço de memória de árvores (hold) inicial de 150?</p></li>
+            <li><p class="fst-italic fs-6">Se não usarmos as etapas bb com tbr, o que acontece se diminuirmos o espaço de memória de árvores (hold), mantendo o mesmo número de RAS da análise inicial de 700?</p></li>
+            <li><p class="fst-italic fs-6">Execute os dois procedimentos anteriores, mas agora com as etapas bb + tbr em seguida. O que aconteceu con o número de passos das árvores obtidas?</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>    

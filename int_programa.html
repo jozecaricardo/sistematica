@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sistemática Filogenética e métodos baseados em modelos</a>
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger">Introdução</button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="introducao.html">Início</a></li>
+              <li><a class="dropdown-item" href="int_objetivos.html">Objetivos</a></li>
+              <li><a class="dropdown-item" href="int_ementa.html">Ementa</a></li>
+              <li><a class="dropdown-item" href="int_programa.html">Programa</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="int_referencias.html">Referências bibliográficas</a></li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Classificações
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="class_objetivos.html">Objetivos</a></li>
+                  <li><a class="dropdown-item" href="class_exercicios.html">Para refletir e responder...</a></li>
+                  <li><a class="dropdown-item" href="class_subordina.html">Preparando uma classificação por subordinação</a></li>
+                  <li><a class="dropdown-item" href="class_seque.html">Preparando uma classificação por sequenciação</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sistemática filogenética (Cladística)
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="PARC_objetivos.html">Objetivos</a></li>
+                    <li><a class="dropdown-item" href="#">Morfologia: busca TRADICIONAL pelo TNT</a></li>
+                    <li><a class="dropdown-item" href="#">Morfologia: Busca com o uso de "NEW TECHNOLOGY" pelo TNT</a></li>
+                    <li><a class="dropdown-item" href="PARC_moleculaTNT.html">DNA e RNA: Busca de árvores pelo TNT</a></li>
+                    <li><a class="dropdown-item" href="PARC_bootBremer.html">Índices de suporte (bootstrap e Índice de Bremer) no TNT</a></li>
+                    <li><a class="dropdown-item" href="PARC_pesagemImplicita.html">Pesagem implícita (Implicit weighting)</a></li>
+                    <li><a class="dropdown-item text-wrap" href="PARC_sensit.html">Análise de sensitividade com o uso de diferentes valores de K determinados pela matriz de caracteres</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="PARC_referencias.html">Referências</a></li>
+                </ul>
+             </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Métodos baseados em modelos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="MOD_objetivos.html">Objetivos</a></li>
+                    <li><a class="dropdown-item text-wrap" href="MOD_alinhamento.html">Alinhamento de sequências</a></li>
+                    <li><a class="dropdown-item text-wrap" href="#">Escolha de modelos de evolução molecular no PartitionFinder</a></li>
+                    <li><a class="dropdown-item text-wrap" href="#">Busca de árvores no IQTree e índice de suporte (máxima verossimilhança)</a></li>
+                    <li><a class="dropdown-item text-wrap" href="#">Preparação dos dados e busca de árvores pelo MrBayes (Bayesianismo)</a></li>
+                    <li><a class="dropdown-item text-wrap" href="#">Escolha de melhor modelo com integração termodinâmica e fator de Bayes</a></li>
+                    <li><a class="dropdown-item text-wrap" href="#">Bayesianismo e evidência total (matriz com caracteres baseados em morfologia e em sequências de DNA)</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Referências</a></li>
+                </ul>
+             </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <p class="fs-3 fw-bold">Programa da disciplina</p>
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 1</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Introdução à Sistemática</p>
+            
+            <ul class="card-text lh-sm fs-5">
+                <li class="text-danger fw-bold">Ontologia das classificações biológicas (aula bônus!)</li>
+                <li>Escolas de classificação</li>
+                <li>Grupos monofiléticos e merofiléticos</li>
+                <li>Homologia e homoplasia</li>
+                <li>Tipos de dendrogramas</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 2</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Séries de transformação</p>
+            
+            <ul class="card-text lh-sm fs-5">
+                <li>Estrutura e caráter: existe diferença?</li>
+                <li>Construção e codificação de caracteres morfológicos e tratamento de caracteres moleculares</li>
+                <li>Plesiomorfia, apomorfia, simplesiomorfia, sinapomorfia, autapomorfia</li>
+                <li>Métodos de polarização de séries de transformação (ontogenia, fóssil e grupo-irmão) e enraizamento</li>
+                <li>Caracteres minimamente e maximamente conectados (ordenados e não ordenados)</li>
+                <li>Caracteres discretos e contínuos: como tratarmos?</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 3</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Sistemática Filogenética (cladismo)</p>
+            
+            <ul class="card-text lh-sm fs-5">
+                <li>Congruência e princípio da Parcimônia: algoritmos de Fitch e Wagner</li>
+                <li>ACCTRAN e DELTRAN</li>
+                <li>Índices de consistência (IC) e retenção (IR) de caracteres e da árvore</li>
+                <li>Árvores de consenso (estrito, semi-estrito e de maioria)</li>
+                <li>Pesagem a priori e a posteriori: ponderação implícita e análise de sensitividade</li>
+                <li>Métodos de busca de árvores: forma tradicional e a "nova tecnologia" no TNT</li>
+                <li>Índices de suporte: <i>bootstrap</i>, <i>jacknife</i> e índice de Bremer</li>
+            </ul>
+        </div>
+    </div>        
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 4</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Como obter um resultado em Sistemática Filogenética? Protocolo para busca de árvores mais parcimoniosas</p>
+            <ul class="card-text fs-5 lh-sm">
+                <li>Construindo uma matriz de caracteres com o MESQUITE e/ou o MEGA e principais formatos de arquivos</li>
+                <li>Uso do TNT para busca de árvores (busca tradicional)</li>
+                <li>Uso do TNT para busca de árvores (<i>New Technology</i>)</li>
+                <li>Uso de scripts no TNT: estimação de índices de consistência e retenção, <i>bootstrap</i>, <i>jacknife</i> e índice de Bremer</li>
+                <li>Ponderação implícita e estimação de valores de <i>K</i>, com base na matriz de caracteres (<b>análise de sensitividade</b>)</li>
+            </ul>
+        </div>    
+    </div>
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 5</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Dados moleculares</p>
+            <ul class="card-text fs-5 lh-sm">
+                <li>Genoma e sinal filogenético: Teoria do Relógio Molecular</li>
+                <li>Genes parálogos e ortólogos</li>
+                <li>Mutações</li>
+                <li>Transições e transversões: algoritmo de Sankoff para o cladismo</li>
+                <li>Parcimônia, distância p e modelos de evolução molecular: fenômeno de atração dos grandes ramos</li>
+                <li>Filogramas, cladogramas e árvores ultramétricas</li>
+            </ul>
+        </div>    
+    </div>
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 6</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Métodos baseados em modelos estatísticos</p>
+            <ul class="card-text fs-5 lh-sm">
+                <li>Distribuições</li>
+                <li>Máxima verossimilhança e otimização de caracteres (modelos Mk e BM)</li>
+                <li>Teorema de Bayes e estimativa Bayesiana de probabilidades posteriores</li>
+                <li>Prioris e probabilidades posteriores conjugadas e marginais</li>
+                <li>Métodos para busca dos valores da posterior: cadeias de Markov-Monte Carlo (MCMC) e MC<sup>3</sup></li>
+            </ul>
+        </div>    
+    </div>
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 7</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Como obter um resultado com o uso de métodos baseados em modelos estatísticos? Protocolo para busca de <b>árvores mais verossímeis</b> à matriz de caracteres</p>
+            <ul class="card-text fs-5 lh-sm">
+                <li>Escolha dos melhores modelos de evolução para genes e dados morfológicos numa perspectiva frequentista: critérios de informação Akaike (AIC) e Bayesiano (BIC)</li>
+                <li>Particionamento e concatenação de dados na matriz (modelo de concatenação) com o PartitionFinder e o SequenceMatrix</li>
+                <li>Parâmetros e hiperparâmetros: como ajustá-los?</li>
+                <li><i>RaxML</i>, <i>MEGA</i> e <i>IQTree</i></li>
+                <li>Índice de suporte: <i>bootstrap</i></li>
+            </ul>
+        </div>    
+    </div>
+
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 8</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Como obter um resultado com o uso de métodos baseados em modelos estatísticos? Protocolo para busca de <b>árvores mais prováveis</b> dada a matriz de caracteres (Bayesianismo)</p>
+            <ul class="card-text fs-5 lh-sm">
+                <li><i>MrBayes</i> e <i>BEAST</i></li>
+                <li>Prioris e posterioris: ajuste de parâmetros e hiperparâmetros</li>
+                <li>Cadeias de Markov-Monte Carlo e convergência</li>
+                <li>Escolha de modelos numa perspectiva Bayesiana: integração termodinâmica e fator de Bayes</li>
+                <li>Árvores de máxima credibilidade e probabilidades posteriores como indicador de incerteza</li>
+            </ul>
+        </div>    
+    </div>
+
+
+    <div class="card">
+        <div class="card-header fs-3 fw-bold bg-success text-white">Parte 9</div>
+        <div class="card-body bg-success bg-opacity-25">
+            <p class="card-title fs-4 fw-semibold">Evidência Total <i>vs.</i> consensos</p>
+            <ul class="card-text fs-5 lh-sm">
+               <li>Que ramos são suportados por mais de um método? O que significa um ramo ser sustentado por um e não por outro método?</li>
+            </ul>
+        </div>    
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

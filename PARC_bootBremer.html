@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>suportes de parcimônia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sistemática Filogenética e métodos baseados em modelos</a>
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger">Introdução</button>
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="introducao.html">Início</a></li>
+            <li><a class="dropdown-item" href="int_objetivos.html">Objetivos</a></li>
+            <li><a class="dropdown-item" href="int_ementa.html">Ementa</a></li>
+            <li><a class="dropdown-item" href="int_programa.html">Programa</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="int_referencias.html">Referências bibliográficas</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Classificações
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="class_objetivos.html">Objetivos</a></li>
+                <li><a class="dropdown-item" href="class_exercicios.html">Para refletir e responder...</a></li>
+                <li><a class="dropdown-item" href="class_subordina.html">Preparando uma classificação por subordinação</a></li>
+                <li><a class="dropdown-item" href="class_seque.html">Preparando uma classificação por sequenciação</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sistemática filogenética (Cladística)
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="PARC_objetivos.html">Objetivos</a></li>
+                  <li><a class="dropdown-item" href="#">Morfologia: busca TRADICIONAL pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="#">Morfologia: Busca com o uso de "NEW TECHNOLOGY" pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_moleculaTNT.html">DNA e RNA: Busca de árvores pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_bootBremer.html">Índices de suporte (bootstrap e Índice de Bremer) no TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_pesagemImplicita.html">Pesagem implícita (Implicit weighting)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="PARC_sensit.html">Análise de sensitividade com o uso de diferentes valores de K determinados pela matriz de caracteres</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="PARC_referencias.html">Referências</a></li>
+              </ul>
+           </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Métodos baseados em modelos
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="MOD_objetivos.html">Objetivos</a></li>
+                  <li><a class="dropdown-item text-wrap" href="MOD_alinhamento.html">Alinhamento de sequências</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Escolha de modelos de evolução molecular no PartitionFinder</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Busca de árvores no IQTree e índice de suporte (máxima verossimilhança)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Preparação dos dados e busca de árvores pelo MrBayes (Bayesianismo)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Escolha de melhor modelo com integração termodinâmica e fator de Bayes</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Bayesianismo e evidência total (matriz com caracteres baseados em morfologia e em sequências de DNA)</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Referências</a></li>
+              </ul>
+          </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+  <!---- Exercícios -->
+  <div>
+    <p class="fs-2 text-success">First things first</p>
+    <ol>
+        <li class="fs-4 fw-normal">Crie um diretório de trabalho na raiz do seu computador. Evite muitos subdiretórios;</li>
+        <li class="fs-4 fw-normal">Por favor, ajuste inicialmente o mxram com <code>mxram 2000;</code> (aumenta o espaço na memória RAM) e, em seguida, carregue a matriz de caracteres com <code>proc [nome_do_arquivo_referente_à_matriz_de_caracteres].tnt;</code>. Só depois disso, rode a rotina (nao esquecendo o .txt) e os argumentos.</li>
+    </ol>
+  </div>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Parte #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Uma análise para calcular valores de <i>bootstrap</i> não paramétrico para cada nó do cladograma, <i>sem pesagem implícita</i></strong>. Os valores de <i>bootstrap</i> não paramétrico serão obtidos com base em <i>1000 réplicas, com 500 RAS em cada réplica, mantendo 50 árvores em cada busca, seguida de uma busca tbr</i>. No pipeline, digite <code>run suportes_zeca.txt no yes no;</code>.
+
+          <pre>
+            <code>
+                macro=;
+                macro * 15 1000;
+                macfloat 3;
+                hold 99999;
+
+                /* rotina para calcular suportes basicos */
+
+                quote
+                ================================================================================
+                Por favor, coloque yes ou no, em sequencia seguindo a ordem abaixo, no tipo de coisa que deseja, exceto
+                    o kvalor. Este deve ser o valor de kvalor de Mirande ja estimado. A opção k de Mirande refere-se a YES ou NO,
+                    no que concerne à busca com ou sem a IW:
+                1) Se colocar YES para Bremer ou Bremer relativo,
+                favor colocar o numero de arvores subotimas.
+                Caso contrario, ignore esse argumento.
+                2) Se optar por bootstrap, nao e necessario dizer NO para o Bremer relativo.
+                Isso so e necessario quando usar a opcao Bremer.
+                3) Por favor, ajuste inicialmente o mxram e, em seguida, carregue a
+                matriz de caracteres. So depois disso, rode a rotina (nao esquecendo o .txt) e os argumentos.
+
+                    Bremer
+                    bootstrap
+                    k de Mirande
+                    kvalor
+                    Numero de arvores subotimas
+                    Bremer relativo
+                ================================================================================	   
+                ;
+                var:bremer booo kmira;
+                set bremer %1;
+                set booo %2;
+                set kmira %3;
+
+                /* Para calculo do Bremer */
+                if ('bremer' == yes)
+                    k0;
+                    piwe-;
+                    if ('kmira' == no)
+                        mult 1000 = hold 1000 tbr;
+                        bb=tbr;
+                        macro*10000;
+                        var:arv soti rela;
+                        set arv 1000;
+                        set soti %5;
+                        set rela %6;
+                        loop 0 ('soti'-1);
+                            sub #1;
+                            set arv 'arv' +1000;
+                            hold 'arv';
+                            bb=fill;
+                        stop;
+                    else
+                        var: ck;
+                        set ck %4;
+                        piwe='ck';
+                        mult 1000 = hold 1000 tbr;
+                        bb=tbr;
+                        macro*10000;
+                        var:arv soti rela;
+                        set arv 1000;
+                        set soti %5;
+                        set rela %6;
+                        loop 0 ('soti'-1);
+                            sub #1;
+                            set arv 'arv' +1000;
+                            hold 'arv';
+                            bb=fill;
+                        stop;
+                    end;
+
+                /* para criar a arvore de suporte com bremer absoluto */
+                    if ('rela' == no)
+                        tt=;
+                        bsupport;
+                        tt & bre_abs.svg;
+                    else
+                        tt=;
+                        bsupport[;
+                        tt & bre_rel.svg;
+                    end;
+                end;
+
+                if ('booo' == yes)
+                    clb;
+                    k0;
+                    piwe-;
+                    if('kmira' == no)
+                        /* Para o calculo do bootstrap */
+                        tt=;
+                        resample boot frequency replications 1000 [mult 500 = hold 50 tbr; bb = tbr];
+                        tt & boot.svg;
+                        taxname=;
+                        export- boot.tre;
+                    else
+                        var: ck;
+                        set ck %3;
+                        piwe='ck';
+                        /* Para o calculo do bootstrap */
+                        tt=;
+                        resample poisson replications 1000 [mult 500 = hold 50 tbr; bb = tbr];
+                        /* resample boot [mult 1000=hold 1000 tbr; bb=tbr] replications 1000; */
+                        tt & boot.svg;
+                        taxname=;
+                        export- boot.tre;
+                    end;
+                end;
+                quote Macro designed by J. R. I. Ribeiro (v. 1.4);
+                proc/;
+            </code>
+          </pre>
+          <p></p>
+          <p class="fw-light font-monospace">Repare que essa rotina tem extensão .txt, porque na verdade não importa se usamos <bold>.run</bold> ou <bold>.txt</bold>.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Parte #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Uma análise para calcular valores de <i>bootstrap</i> não paramétrico para cada nó do cladograma, <i>com pesagem implícita</i></strong>. Os valores de <i>bootstrap</i> não paramétrico serão obtidos com base em <i>1000 réplicas, com 500 RAS em cada réplica, mantendo 50 árvores em cada busca, seguida de uma busca tbr</i>. No pipeline, digite <code>run suportes_zeca.txt no yes yes [colocar o valor de K de Mirande obtido na sua análise de pesagem implícita];</code>.
+          <p></p>
+          <p class="fw-light font-monospace">Repare que, na rotina, o comando <code>resample</code> é seguido do argumento <code>poisson</code>, a fim de corrigir os valores de <i>bootstrap</i> com pesagem implícita.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Parte #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Uma análise para calcular valores de <i>índice de Bremer absoluto</i> para cada nó do cladograma, <i>com ou sem pesagem implícita</i> (dizendo <i>yes</i> ou <i>no</i>)</strong>. Os valores de <i>índice de Bremer</i> serão obtidos com base em <i>1000 réplicas, com 500 RAS em cada réplica, mantendo 50 árvores em cada busca, seguida de uma busca tbr</i>. Para obtermos uma boa distribuição de árvores subótimas e irmos amostrando cada vez mais em cada uma dessas ilhas, no pipeline, digite <code>run suportes_zeca.txt yes no yes/no [se yes, colocar o valor de K de Mirande obtido na sua análise de pesagem implícita] 15 [número de árvores subótimas] no;</code>.
+          <p></p>
+          <p class="fw-light font-monospace">Repare que, na rotina, o comando <code>resample</code> é seguido do argumento <code>poisson</code>, a fim de corrigir os valores de <i>bootstrap</i> com pesagem implícita.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Exercícios
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul>
+            <li><p class="fst-italic fs-6">Se diminuirmos o número de árvores subótimas, o que acontece com os valores de Bremer absoluto em geral?</p></li>
+            <li><p class="fst-italic fs-6">Compare os valores de Bremer absoluto com os de Bremer relativo para um mesmo nó. Faça isso com outros nós agora. Discuta vantagens e desvantagens desses suportes.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
