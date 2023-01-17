@@ -79,7 +79,8 @@
     <p class="fs-2 text-success">First things first</p>
     <ol>
         <li class="fs-4 fw-normal">Crie um diretório de trabalho na raiz do seu computador. Evite muitos subdiretórios;</li>
-        <li class="fs-4 fw-normal">Por favor, instale o programa <a href="https://www.megasoftware.net/">MEGA</a>.</li>
+        <li class="fs-4 fw-normal">Por favor, instale o programa <a href="http://www.iqtree.org/">IQ-TREE</a> se quiser trabalhar com partições diferentes.</li>
+        <li class="fs-4 fw-normal">Se não for o seu caso, use o <a href="http://iqtree.cibiv.univie.ac.at/">IQ-TREE web server</a>.</li>
     </ol>
   </div>
 
@@ -87,30 +88,20 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Busca BLAST 
+          Busca de árvores mais verossímeis 
         </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
             <ul>
-                <li><p class="fst-italic fs-6">Busque fragmentos de sequências de um gene mitocondrial e um gene nuclear das espécies de <i>catshark</i> para a realização do trabalho final, a partir da ferramenta <strong>blastn</strong> do GenBank. Você pode também usar diretamente a opção <strong>Do BLAST Search</strong> da opção ALIGN do programa MEGA.</p></li>
-            </ul>
-
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Alinhamento global
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-            <ul>
-                <li><p class="fst-italic fs-6">Faça alinhamentos globais de cada uma partição separadamente no programa MEGA, com a opção ALIGN. Explore as opções de pesagem e lembre-se que o algorítmo de alinhamento depende do programa usado.</p></li>
-                <li><p class="fst-italic fs-6">Se suas sequências são codificadoras de proteínas (como é o caso do gene COI), fique à vontade de usar outras opções do MEGA que levem isso em consideração ou use o <a href="http://mafft.cbrc.jp/alignment/server/index.html">MAFFT on-line version</a>. Nele, você pode usar a estratégia <strong>G-INS-i</strong>.</p></li>
-                <li><p class="fst-italic fs-6">Concatene as sequências de tal forma que os táxons fiquem organizados. Para tanto, use o programa <a href="https://www.softpedia.com/get/Science-CAD/Sequence-Matrix.shtml">Sequence Matrix</a>.</p></li>
+                <li><p class="fst-italic fs-6">Na seção <strong>Tree Inference</strong>, coloque os dados no campo <strong>Alignment file:</strong> da subseção <i>Input Data</i>, conforme exemplos fornecidos pelo próprio sítio web.</p></li>
+                <li><p class="fst-italic fs-6">No campo <strong>Substitution model:</strong> da subseção <i>Substitution Model Options</i>, escolha o tipo de modelo mais verossímil aos seus dados. Lembre-se que para partições é melhor usar o programa baixado em seu computador.</p></li>
+                <li><p class="fst-italic fs-6">No campo <strong>Rate heterogeneity:</strong>, você pode optar por usar o parâmetro <i>Gamma[+G]</i>, caso os caracteres de sua matriz <i>não evoluam numa mnesma taxa</i>! Se as taxas forem diferentes, porque nem todos os os caracteres evoluem na mesma taxa (FITCH & MARGOLIASH, 1967), assumimos que as taxas variem ao longo dos diferentes caracteres de acordo com uma distribuição gama (YANG, 1993) discretizada em, no mínimo, quatro categorias. Podemos, inclusive, escolher o número de categorias no campo <strong>#rate categories:</strong>. <strong>Se a frequência de unm estado de caráter for alta, observaremos mais transições de um estado de caráter para esse estado do que o contrário.</strong> Esse modelo é denominado <i>among-character rate variation (ACRV model)</i>. O parâmetro <i>+I</i> refere-se à presença de caracteres que não variem, o que é praticamente impossível de acontecer, principalmente quando usamos matrizes de caracteres baseados em morfologia. Dessa forma, o campo <strong>Invar. sites[+I]</strong> geralmente não é marcado. Cuidado com esse parâmetro: coisas ruins acontecem quando abrimos as portas do inferno!</p></li>
+                <li><p class="fst-italic fs-6">O campo <strong>FreeRate heterogeneity:</strong> faz a distribuição gama variar ao longo da análise.</p></li>
+                <li><p class="fst-italic fs-6">O campo <strong>Ascertainment bias correction:</strong> corrige o problema de caracteres não informativos como autapomorfias ou sítios que não mudam entre as espécies da matriz. Esse é mais um parâmetro de um modelo hierárquico que estamos criando: o parâmetro <i>+ASC</i>.</p></li>
+                <li><p class="fst-italic fs-6">Na subseção <i>Branch Support Analysis</i>, vamos ajustar coisas para obtermos suportes dos ramos com uma análise de <i>bootstrap</i> não paramétrico, conforme visto em sala de aula. No campo <strong>Bootstrap analysis:</strong>, tomem cuidado com a opção <i>ultrafast</i> porque ela pode produzir valores sem sentido para um ramo, tendo em vista que nesse tipo de procedimento não há reamostragem de toda a matriz, mas leva em conta valores de algumas pseudoréplicas já estimadas. Na opção <i>standard</i>, só podem ser realizadas 1000 reamostragem com substituição.</p></li>
+                <li><p class="fst-italic fs-6">Na subseção <i>IQ-TREE Search Parameters</i>, a opção <strong>Pertubation strength:</strong> permite dizer que proporção de ramos das árvores iniciais produzidas (<i>starting trees</i>) será usada para gerar pertubações.</p></li>
+                <li><p class="fst-italic fs-6">A opção <strong>IQ-TREE stopping rule:</strong> é um limite que colocamos para que, durante a busca, o procedimento ainda fique durante n vezes tentando achar árvores mais verossímeis. Ao final de n vezes, se a busca falhar em achar árvores mais verossímeis, uma nova rodada inicia-se.</p></li>
             </ul>
         </div>
       </div>
