@@ -99,15 +99,18 @@
           <div>
             <pre>
                 <code>
+                    nstates 8;
                     xread
                     ' Pode colocar qualquer comentário importante aqui ENTRE ASPAS SIMPLES! '
-                    1095 46
+                    1095 46 'numero de caracteres e numero de taxons'
+                    &[dna]
                     Nome_seq #1
-                    Seq #1
+                    Seq #1 'A sequencia não deve ser intervalada'
                     ...
                     Nome_seq #46
                     Seq #46
                     ; ' Note a presenca do ponto-e-virgula '
+                    proc/;
                 </code>
             </pre>
             <p class="fw-light font-monospace">Você preferencialmente deve salvar o arquivo com extensão <bold>.tnt</bold>.</p>
@@ -140,6 +143,7 @@
                     /*  aqui comeca analise tradicional */
                     ttags - ;      /*  por prevencao, descarta todas as etiquetas de arvore da memoria   */
                     rseed 0 ;      /*  define random seed, 0 = time   */
+                    /* NESTA LINHA, ANTES DA BUSCA TRADICIONAL, PODEMOS COLOCAR OS PESOS DE UMA OTIMIZAÇÃO DE SANKOFF */
                     mult 700 = hold 150 tbr; /* 700 RAS (random addition sequences: arvores de Wagner), mantendo 150 na memoria a cada replica */
                     bb=tbr; /* com as arvores retidas na memoria, fazer uma busca do tipo tree-bissection-reconnection (tbr) */
                     tsave *MP_trees.tre ;      /*  abre arquivo de arvores, para salvar todas as árvores igualmente parcimoniosas da busca (maximum parsimony trees - MPT)  */ 
@@ -151,6 +155,7 @@
                         tsave *Consenso_trees.tre ;      /*  abre arquivo de arvore  e mantem apenas a ultima arvore na memoria - observe que as MPT serão descartadas, ficando apenas o consenso estrito  */
                         save {strict};
                         tsave/ ;      /*  fecha arquivo com consenso salvo   */
+                        export = treePlusConsensoNewick.tre;
                     end;
                     apo-; /* lista de sinapomorfias */
                     tsave tree1.tmp;
@@ -160,8 +165,9 @@
                     short tree1.tmp; /* resgata uma arvore nao consenso */
 
                     ttags = ;  
-                    apo ]  /*  mapeia as sinapomorfias na ultima árvore da memória   */
-                    ttag & Map_apoTree.svg ;      /*  salva arvore */
+                    /* apo ]   mapeia as sinapomorfias na ultima árvore da memória, se forem poucas sinapomorfias   */
+                    tplot;
+                    ttag & Tree.svg ;      /*  salva arvore */
                     taxname=;
 
                     log/ ;
@@ -182,10 +188,10 @@
       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <ul>
-            <li><p class="fst-italic fs-6">Se não usarmos as etapas bb com tbr, o que acontece se diminuirmos o número de RAS, mantendo o mesmo espaço de memória de árvores (hold) inicial de 150?</p></li>
+            <li><p class="fst-italic fs-6">Se não usarmos as etapas bb com tbr (desativando-se <code>bb=tbr;</code>), o que acontece se diminuirmos o número de RAS, mantendo o mesmo espaço de memória de árvores (hold) inicial de 150? <strong>Dica: use o comando <code>le;</code> para saber o número de passos das árvores e desative a linha <code>rseed 0;</code>.</strong></p></li>
             <li><p class="fst-italic fs-6">Se não usarmos as etapas bb com tbr, o que acontece se diminuirmos o espaço de memória de árvores (hold), mantendo o mesmo número de RAS da análise inicial de 700?</p></li>
             <li><p class="fst-italic fs-6">Execute os dois procedimentos anteriores, mas agora com as etapas bb + tbr em seguida. O que aconteceu con o número de passos das árvores obtidas?</p></li>
-            <li><p class="fst-italic fs-6">Execute uma busca de árvores com uma otimização de Sankoff, usando <code>ccode );</code> ou, se preferir, execute uma busca onde o peso das transversões é duas vezes maior que o das transições com <code>cost. =?/? 2 A/G 1 C/T 1;</code>. O que aconteceu con a topologia e o número de passos das árvores obtidas?</p></li>
+            <li><p class="fst-italic fs-6">Execute uma busca de árvores com uma otimização de Sankoff, usando <code>ccode );</code> ou, se preferir, execute uma busca onde o peso das transversões é cinco vezes maior que o das transições com <code>cost. =?/? 5 A/G 1 C/T 1;</code>. O que aconteceu con a topologia e o número de passos das árvores obtidas?</p></li>
           </ul>
         </div>
       </div>
