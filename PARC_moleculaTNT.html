@@ -149,6 +149,7 @@
                     tsave *MP_trees.tre ;      /*  abre arquivo de arvores, para salvar todas as árvores igualmente parcimoniosas da busca (maximum parsimony trees - MPT)  */ 
                     save ;      /*  salva arvores para arquivo   */
                     tsave / ;      /*  fecha arquivo com arvores salvas   */
+                    taxname =;
                     export = Trees_MP_newick.tre; /*  exporta a árvore para ser lida em softwares como o FigTree  */
                     if ((ntrees+1) > 1)
                         nelsen*;      /*  calcula consenso estrito   */
