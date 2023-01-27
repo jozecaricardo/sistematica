@@ -185,7 +185,7 @@
                     if('kmira' == no)
                         /* Para o calculo do bootstrap */
                         tt=;
-                        resample boot frequency replications 1000 [mult 500 = hold 50 tbr; bb = tbr];
+                        resample boot frequency nogc replications 1000 [mult 500 = hold 50 tbr; bb = tbr];
                         tt & boot.svg;
                         taxname=;
                         export- boot.tre;
@@ -195,7 +195,7 @@
                         piwe='ck';
                         /* Para o calculo do bootstrap */
                         tt=;
-                        resample poisson replications 1000 [mult 500 = hold 50 tbr; bb = tbr];
+                        resample poisson nogc replications 1000 [mult 500 = hold 50 tbr; bb = tbr];
                         /* resample boot [mult 1000=hold 1000 tbr; bb=tbr] replications 1000; */
                         tt & boot.svg;
                         taxname=;
