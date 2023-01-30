@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pesagem implícita</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sistemática Filogenética e métodos baseados em modelos</a>
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger">Introdução</button>
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Início</a></li>
+            <li><a class="dropdown-item" href="int_objetivos.html">Objetivos</a></li>
+            <li><a class="dropdown-item" href="int_ementa.html">Ementa</a></li>
+            <li><a class="dropdown-item" href="int_programa.html">Programa</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="int_referencias.html">Referências bibliográficas</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Classificações
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="class_objetivos.html">Objetivos</a></li>
+                <li><a class="dropdown-item" href="class_exercicios.html">Para refletir e responder...</a></li>
+                <li><a class="dropdown-item" href="class_subordina.html">Preparando uma classificação por subordinação</a></li>
+                <li><a class="dropdown-item" href="class_seque.html">Preparando uma classificação por sequenciação</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sistemática filogenética (Cladística)
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="PARC_objetivos.html">Objetivos</a></li>
+                  <li><a class="dropdown-item" href="#">Morfologia: busca TRADICIONAL pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="#">Morfologia: Busca com o uso de "NEW TECHNOLOGY" pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_moleculaTNT.html">DNA e RNA: Busca de árvores pelo TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_bootBremer.html">Índices de suporte (bootstrap e Índice de Bremer) no TNT</a></li>
+                  <li><a class="dropdown-item" href="PARC_pesagemImplicita.html">Pesagem implícita (Implied weighting)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="PARC_sensit.html">Análise de sensitividade com o uso de diferentes valores de K determinados pela matriz de caracteres</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="PARC_referencias.html">Referências</a></li>
+              </ul>
+           </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Métodos baseados em modelos
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="MOD_objetivos.html">Objetivos</a></li>
+                  <li><a class="dropdown-item text-wrap" href="MOD_alinhamento.html">Alinhamento de sequências</a></li>
+                  <li><a class="dropdown-item text-wrap" href="MOD_partition.html">Escolha de modelos de evolução molecular no IQ-TREE e melhores esquemas de partição</a></li>
+                  <li><a class="dropdown-item text-wrap" href="MOD_verossimil.html">Busca de árvores no IQTree e índice de suporte (máxima verossimilhança)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="MOD_bayes.html">Preparação dos dados e busca de árvores pelo MrBayes (Bayesianismo)</a></li>
+                  <li><a class="dropdown-item text-wrap" href="#">Escolha de melhor modelo com integração termodinâmica e fator de Bayes</a></li>
+                  <li><a class="dropdown-item text-wrap" href="MOD_bayesTotalEvid.html">Bayesianismo e evidência total (matriz com caracteres baseados em morfologia e em sequências de DNA)</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="MOD_referencias.html">Referências</a></li>
+              </ul>
+          </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+  <!---- Exercícios -->
+  <div>
+    <p class="fs-2 text-success">First things first</p>
+    <ol>
+        <li class="fs-4 fw-normal">Crie um diretório de trabalho na raiz do seu computador. Evite muitos subdiretórios.</li>
+        <li class="fs-4 fw-normal">Após a escolha do modelo de substituição (ou modelos, caso haja mais de uma partição), instale o <a href="https://nbisweden.github.io/MrBayes/download.html">MrBayes</a>. </li>
+        <li class="fs-4 fw-normal">Instale também o programa <a href="https://github.com/beast-dev/tracer/releases/tag/v1.7.2">Tracer</a> para a visualização de convergência das cadeias de Markov. </li>        
+    </ol>
+  </div>
+
+  <p class="fw-semibold fs-6 lh-sm">Criar uma matriz de dados moleculares para ser lida no MrBayes, com base nas informações contidas em <a href="primate-mtDNA-interleaved.nex">DNA_primatas_interleaved</a>,
+     em formato <i>interleaved</i>.</p>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Parte #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <strong>Tutorial para criar uma matriz de caracteres baseados em DNA, a fim de ser lido corretamente pelo MrBayes:</strong>
+            <div>
+              <pre>
+                  <code>
+                      #NEXUS
+                      [qualquer comentário pode ser colocado entre colchetes, em qualquer perte do código]
+
+                      BEGIN TAXA; [bloco dos táxons]
+                        DIMENSIONS NTAX=; [colocar o número de táxons de sua matriz]
+                        TAXLABELS [colocar, abaixo, o nome dos táxons, tanto um em cada linha como em bloco]
+                        ...
+                        ; [importante terminar com ponto-e-vírgula]
+                      END;
+
+                      BEGIN CHARACTERS; [bloco dos caracteres]
+                        DIMENSIONS NCHAR=; [colocar o número de caracteres]
+                        FORMAT DATATYPE=DNA SYMBOLS= "A B C D E F G H I K L M N P Q R S T U" MISSING=? GAP=- INTERLEAVE;
+
+                      MATRIX [dados]
+                      nome_do_taxon#1 seq#1
+                      ...
+                      ;
+                      END;
+                  </code>
+              </pre>
+              <p class="fw-light font-monospace">Você deve salvar o arquivo no formato Nexus, com a extensão <bold>.nex</bold>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Código para uma análise Bayesiana (molecular ou morfológica)
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="collapseTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Uma análise básica para busca Bayesiana de árvores mais prováveis (hipótese), dado os dados e um modelo de evolução (ou modelos)</strong>.
+            <ol>
+              <li class="fs-4 fw-normal">Abrir a pasta onde o MrBayes foi descompactado <strong>(/MrBayes-3.2.7-WIN/bin/)</strong> e clicar no executável mb.3.2.7-win32.exe ou mb.3.2.7-win64.exe,
+                 dependendo do seu computador; em seguida, copie as linhas abaixo para um arquivo .txt;</li>
+              <li class="fs-4 fw-normal"><code>begin mrbayes;</code></li>
+              <li class="fs-4 fw-normal"><code>set autoclose=yes nowarn=yes;</code> [fecha o programa depois de terminar]</li>
+              <li class="fs-4 fw-normal"><code>log start filename="NOME_DO_ARQUIVO_CONTENDO_OS_RESULTADOS.log";</code> [inicia o arquivo .log]</li>
+              <li class="fs-4 fw-normal"><code>constraint ingroup = 2-.;</code> [define o grupo-interno]</li>
+              <li class="fs-4 fw-normal"><code>prset topologypr=constraints(ingroup);</code> [ajuda na convergência e corrige o enraizamento]</li>
+              <li class="fs-4 fw-normal"><code>unlink statefreq=(all) shape=(all);</code> [desconecta os parâmetros ao longo das partições, se houver mais de uma]</li>
+              <p></p>
+              <p>Se for uma matriz de caracteres baseados em morfologia...</p>
+              <li class="fs-4 fw-normal"><code>lset coding=variable rates=gamma;</code> [Mkv+G] [ajusta o modelo para dados baseados em morfologia]</li>
+              <p></p>
+              <p>Caso contrário...</p>
+              <li class="fs-4 fw-normal"><code>lset nst=6 rates=gamma; [GTR+G]</code> [ajusta o modelo GTR+G para os dados baseados em DNA]</li>
+              <p></p>
+              <li class="fs-4 fw-normal"><code>prset ratepr=variable;</code> [ajusta os parâmetros do priori para a variação da taxa de evolução entre caracteres]</li>
+              <li class="fs-4 fw-normal"><code>prset shapepr=exponential (1.0)</code> [ajusta os hiperparâmetros da distribuição exponencial do priori para a taxa de variação entre caracteres]</li>
+              <p></p>
+              <p>Agora, a análise propriamente dita!</p>
+              <li class="fs-4 fw-normal"><code>mcmcp ngen=1000000 relburnin=yes burninfrac=0.25 printfreq=1000  samplefreq=1000 nruns=2 nchains=4 nswaps=3 temp=0.02 savebrlens=yes;</code> [parâmetros da análise]</li>
+              <li class="fs-4 fw-normal"><code>mcmc;</code> [inicia a análise]</li>
+              <li class="fs-4 fw-normal"><code>sump;</code> [sumaria os valores obtidos dos parâmetros]</li>
+              <li class="fs-4 fw-normal"><code>sumt contype=halfcompat Outputname=dnaTreePrimates_MRC.t;</code> [resulta em uma árvore de consenso de maioria de 50%]</li>
+              <li class="fs-4 fw-normal"><code>log stop;</code> [fecha o arquivo .log]</li>
+              <li class="fs-4 fw-normal"><code>end;</code> [finaliza a rotina]</li>             
+            </ol>          
+            <p></p>
+            <p class="fw-light font-monospace">Copie essas linhas e salve o copiado para um arquivo .txt. Em seguida, execute no MrBayes <code>execute NOME_DO_ARQUIVO_DE_ROTINA.TXT;</code></p>
+            <p class="fw-light font-monospace">Veja a árvore de consenso de maioria no programa FigTree.</p>
+  
+          </div>
+        </div>
+      </div>   
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Exercícios
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul>
+            <li><p class="fst-italic fs-6">O que acontecerá com o ESS e a convergência se diminuirmos o número de gerações para 500, com <code>ngen=500</code>?</p></li>
+            <li><p class="fst-italic fs-6">O que acontecerá com o ESS se diminuirmos o número de amostras numa rodada, mantendo ainda o número de gerações de 1000000, com <code>samplefreq=10</code>?</p></li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
