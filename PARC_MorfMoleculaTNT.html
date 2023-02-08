@@ -86,7 +86,9 @@
     </ol>
   </div>
 
-  <p class="fw-semibold fs-6 lh-sm">Criar uma matriz de dados moleculares para ser lida no TNT, com base nas informações contidas em <a href="primate-mtDNA.nex">DNA_primatas_not_interleaved</a>, em formato não <i>interleaved</i> ou em <a href="primate-mtDNA-interleaved.nex">DNA_primatas_interleaved</a>, em formato <i>interleaved</i>. Após isso, leia o arquivo da forma que preferir; isto é, <strong>ou você usa o TNT GUI para Windows (conforme já feito em aulas anteriores) ou use via linha de comando, via TNT (versão "Command-driven version").</strong></p>
+  <p class="fw-semibold fs-6 lh-sm">Criar uma matriz de dados baseados em morfologia e em DNA para ser lida no TNT, com base nas informações contidas em <a href="tubaMod.tnt">um estudo de tubarões</a>,
+     em formato não <i>interleaved</i>. Após isso, leia o arquivo da forma que preferir; isto é, <strong>ou você usa o TNT GUI para Windows (conforme já feito em aulas anteriores) ou use via linha de comando,
+     via TNT (versão "Command-driven version").</strong></p>
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
@@ -96,11 +98,11 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>Tutorial para criar uma matriz de caracteres baseados em DNA, a fim de ser lido corretamente pelo TNT:</strong>
+          <strong>Tutorial para criar uma matriz de caracteres baseados em morfologia (dados discretos e/ou contínuos) e em DNA, a fim de ser lido corretamente pelo TNT:</strong>
           <div>
             <pre>
                 <code>
-                    nstates 8;
+                    nstates num 32 dna 8;
                     xread
                     ' Pode colocar qualquer comentário importante aqui ENTRE ASPAS SIMPLES! '
                     1095 46 'numero de caracteres e numero de taxons'
@@ -110,6 +112,16 @@
                     ...
                     Nome_seq #46
                     Seq #46
+
+                    &[continuous] 'se tiver medidas e/ou contagens'
+                    Nome_tax #1 'medidas separadas por espaço e com ponto, nunca vírgula'
+                    ...
+                    Nome_tax #46 'medidas separadas por espaço e com ponto, nunca vírgula'
+
+                    &[numeric] 'caracteres discretos'
+                    Nome_tax #1 01200101010101010101010
+                    ...
+                    Nome_tax #46 01200101010101010101010
                     ; ' Note a presenca do ponto-e-virgula '
                     proc/;
                 </code>
