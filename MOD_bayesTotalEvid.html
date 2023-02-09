@@ -115,9 +115,29 @@
                         FORMAT DATATYPE=mixed(standard: ?-?, dna: ?-?) MISSING=? GAP=- INTERLEAVE;
                         [como alternativa: Format datatype=standard symbols="0123ACGTN" gap=- missing=?;]
 
+                      [Existe ainda a alternativa de usar um bloco só, sem precisar colocar um bloco da táxons e outro de caracteres]
+                      Begin data;
+                        dimensions ntax= nchar=;
+                        format datatype = mixed(dna: ...-..., standard: ...-...) gap=- missing=? interleave; [interleave nesse caso é importante!]
+                      [##############################]
+
                       MATRIX [dados MORFOLÓGICOS misturados às sequências de DNA]
                       nome_do_taxon#1 0001110001CCTTAAGGGGGG
                       ...
+                      ;
+                      END;
+
+                      [Podemos fazer blocos de matrizes também]
+                      MATRIX
+                      [MORFOLOGIA]
+                      nome_do_taxon#1 0001110001
+                      ...
+                      nome_do_taxon#n 0001110001
+
+                      [DNA]
+                      Nome_seq #1 Seq #1
+                      ...
+                      Nome_seq #n Seq #n
                       ;
                       END;
 
@@ -178,7 +198,7 @@
 
                         prset applyto=(all) ratepr=variable; [priori]
                         
-                        mcmcp ngen= 1000000 relburnin=yes burninfrac=0.25 printfreq=1000  samplefreq=1000 nruns=2 nchains=4 temp=0.02 savebrlens=yes, startingtree=random;
+                        mcmcp ngen= 1000000 relburnin=yes burninfrac=0.25 printfreq=1000 samplefreq=1000 nruns=2 nchains=4 temp=0.02 nswaps=3 savebrlens=yes starttree=random;
                         mcmc;
                         sump;
                         sumt contype=halfcompat Outputname=dnaMorfoTree_MRC.t; [podemos endereçar para onde quisermos] 
@@ -226,7 +246,7 @@
               <li class="fs-4 fw-normal"><code>unlink statefreq=(all) revmat=(all) shape=(all) pinvar=(all) tratio=(all);</code> [desconecta os parâmetros ao longo das partições]</li>
               <p></p>
               <p>Agora, a análise propriamente dita!</p>
-              <li class="fs-4 fw-normal"><code>mcmcp ngen=1000000 relburnin=yes burninfrac=0.25 printfreq=1000  samplefreq=1000 nruns=2 nchains=4 nswaps=3 temp=0.02 savebrlens=yes startingtree=random;</code> [parâmetros da análise]</li>
+              <li class="fs-4 fw-normal"><code>mcmcp ngen=1000000 relburnin=yes burninfrac=0.25 printfreq=1000  samplefreq=1000 nruns=2 nchains=4 nswaps=3 temp=0.02 savebrlens=yes starttree=random;</code> [parâmetros da análise]</li>
               <li class="fs-4 fw-normal"><code>mcmc;</code> [inicia a análise]</li>
               <li class="fs-4 fw-normal"><code>sump;</code> [sumaria os valores obtidos dos parâmetros]</li>
               <li class="fs-4 fw-normal"><code>sumt contype=halfcompat Outputname=dnaMorfoTree_MRC.t;</code> [resulta em uma árvore de consenso de maioria de 50%]</li>
