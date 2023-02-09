@@ -83,6 +83,8 @@
         <li class="fs-4 fw-normal">Instale o <a href="https://www.lillo.org.ar/phylogeny/tnt/">TNT (versão "no taxon limit");</a></li>
         <li class="fs-4 fw-normal">Instale o <a href="https://www.lillo.org.ar/phylogeny/tnt/">TNT (versão "Command-driven version")</a>, para usufruir das possibilidades de linhas de comando (o que eu realmente recomendo!).</li>
         <li class="fs-4 fw-normal">Existem rotinas já preparadas por outros usuários. Recomendo fortemente que olhem o sítio <a href="http://phylo.wikidot.com/tntwiki">PhyloWiki</a>, para usufruir das possibilidades de rotinas em linhas de comando.</li>
+        <li class="fs-4 fw-normal">Existe uma forma quase automática de concatenar matrizes diferentes (mesmo com número diferentes de táxons) no TNT. Para tanto, abra o TNT (versão GUI para Windows) e clique em <strong>File/Merge/Import Data</strong>. Com isso, você terá a opção de concatenar arquivos .fasta, .tnt e até .tps. Antes, você terá que dar um nome de arquivo para a saída que será produzida. Depois, é só ir adicionando os arquivos. Pronto!</li>
+        <li class="fs-4 fw-normal">Entretanto, se quiser fazer manualmente, siga os procedimentos abaixo.</li>
     </ol>
   </div>
 
@@ -98,20 +100,18 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>Tutorial para criar uma matriz de caracteres baseados em morfologia (dados discretos e/ou contínuos) e em DNA, a fim de ser lido corretamente pelo TNT:</strong>
+          <strong>Matriz de caracteres baseados em morfologia (dados discretos e/ou contínuos) e em DNA, a fim de ser lido corretamente pelo TNT:</strong>
           <div>
             <pre>
                 <code>
-                    nstates num 32 dna 8;
+                    nstates 32;
                     xread
                     ' Pode colocar qualquer comentário importante aqui ENTRE ASPAS SIMPLES! '
                     1095 46 'numero de caracteres e numero de taxons'
                     &[dna]
-                    Nome_seq #1
-                    Seq #1 'A sequencia não deve ser intervalada'
+                    Nome_seq #1 Seq #1 'A sequencia não deve ser intervalada'
                     ...
-                    Nome_seq #46
-                    Seq #46
+                    Nome_seq #46 Seq #46
 
                     &[continuous] 'se tiver medidas e/ou contagens'
                     Nome_tax #1 'medidas separadas por espaço e com ponto, nunca vírgula'
