@@ -242,7 +242,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Otimização de caracteres baseados em morfologia na árvore de probabilidade posterior
+            Otimização de caracteres baseados em morfologia na árvore de probabilidade posterior (ou em qualquer outra árvore)
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -250,10 +250,10 @@
             <ul>
               <li class="fs-4 fw-normal">Em primeiro lugar, instale o programa <a href="http://www.diversityoflife.org/winclada/">WinClada</a>.</li>
               <li class="fs-4 fw-normal">Há um tutorial em formato <a href="tutorial_winclada_iniesta.pptx">.pptx</a>.</li>
-              <li class="fs-4 fw-normal">Precisamos de uma matriz e de uma árvore, <a href="testeWinclada.tre">em geral no formato Hennig86, NONA ou WinClada</a>, em formato .tre para abrir no programa
-                 a fim de otimizar os caracteres numa árvore produzida. O arquivo já conterá tudo que precisaremos!</li>
+              <li class="fs-4 fw-normal">Precisamos de uma matriz e de uma árvore, <a href="testeWinclada.tre">em geral no formato Hennig86, NONA ou WinClada</a>, em formato .tre para abrir no programa a fim de otimizar os caracteres numa árvore produzida. O arquivo já conterá tudo que precisaremos!</li>
               <li class="fs-4 fw-normal">Para criar esse arquivo, esse formato deve ser produzido no MESQUITE (no caso de árvores sem ou com comprimentos de ramos).
-                 Precisamos abrir tanto a matriz como uma árvore de escolha no MESQUITE e salvar conforme a opção necessária (Hennig86, NONA ou WinClada). Essa é a única forma de fazer o WinClada ler o arquivo!</li>
+                 <strong>Isso, entretanto, só funcionará se sua matriz de caracteres e suas árvores estiverem em formato NEXUS ou NEWICK!</strong> Precisaremos abrir tanto a matriz como uma árvore de escolha no MESQUITE e salvar conforme a opção necessária (Hennig86, NONA ou WinClada). Essa é a única forma de fazer o WinClada ler o arquivo! Para tanto, clique em File/Open File/ e abra o arquivo que você criou no Mesquite. Pronto, ja terá a matriz e uma árvore onde poderá mostrar os caracteres otimizados. Agora, é só seguir o tutorial em .pptx.</li>
+              <li class="fs-4 fw-normal">Se por acaso, você quiser fazer o procedimento para uma árvore produzida pelo método da parcimônia, no TNT, fica bem mais fácil porque o WinClada e o TNT se dão muito bem! <strong>Para tanto, basta abrir a matriz de caracteres em formato .tnt no WinClada clicando em FIle/Open File/, o que vai fazer carregar a matriz. Isso não é suficiente: precisa abrir ainda a árvore. Lembra daqueles arquivos com extensão .tre produzidos nas rotinas para o TNT construídas aqui, os quais não abrem no FigTree? Esses arquivos abrem perfeitamente bem no WinClada. Para abrir esses arquivos com as árvores prontas para otimização de caracteres, clique em File/Open Tree File/ e escolha o arquivo com extensão .tre. Pronto! Agora, é só seguir o tutorial em .pptx.</strong></li>              
             </ul>
           </div>
         </div>
